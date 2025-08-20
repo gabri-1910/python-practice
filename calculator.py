@@ -1,24 +1,27 @@
-def main(operation, num1, num2):
-    if operation == "*":
-        result = (num1 * num2)
-        print("The result is:", result)
-    elif operation == "/":
-        result = (num1 / num2)
-        print("The result is:", result)
-    elif operation == "+":
-        result = (num1 + num2)
-        print("The result is:", result)
-    elif operation == "-":
-        result = (num1 - num2)
-        print("The result is:", result)
-    else:
-        return "The code just broke"
+## This is a calculator app
+def calculator():
+    print("To close the calculator app, set the operator to 0 (zero)")
+    x = 1
+    while x == 1:
+        a = float(input("Enter a number: "))
+        operator = str(input("Enter an operator: "))
+        b = float(input("Enter a number: "))
+        if operator == "+":
+            result = a + b
+            print(result)
+        elif operator == "-":
+            result = a - b
+            print(result)
+        elif operator == "*":
+            result = a * b
+            print(result)
+        elif operator == "/":
+            result = a / b
+            print(result)
+        elif operator == "0":
+            break
+        else:
+            print("Please, enter the right operator")
+        
 
-print("This is a simple calculator:")
-print("Below, you will choose two numbers and a operator:")
-
-num1 = int(input("Choose a number: "))
-operator = str(input("Between the following operators: *, /, +, - choose an operator: "))
-num2 = int(input("Choose a number: "))
-
-main(operator, num1, num2)
+calculator()
